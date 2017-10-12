@@ -1,0 +1,33 @@
+class Rectangle {
+  constructor() {
+    this._width = 10;
+    this._height = 10;
+  }
+
+  set width(w){
+    this._width = w;
+  }
+
+  get width(){
+    return this._width;
+  }
+
+  set height(h){
+    this._height = h;
+  }
+
+  get height(){
+    return this._height;
+  }
+}
+
+class Square extends Rectangle {
+  set width(w){
+    super.width = w;
+    super.height = w;
+  }
+
+  set height(h){
+    super.height = h;
+    super.width = h;
+  }
